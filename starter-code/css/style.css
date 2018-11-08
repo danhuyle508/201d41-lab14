@@ -1,1 +1,55 @@
-/* TODO: Make it awesome */
+body {
+  background-color: lightseagreen;
+}
+
+h1 {
+
+  font-family: fantasy;
+  color: blue
+ 
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+
+}
+
+nav li {
+  float: none;
+  display: inline-block;
+}
+
+nav li a {
+  padding: 14px 45px;
+  text-align: center;
+  color: #b57b8c;
+  text-decoration: none;
+  
+}
+
+
+nav ul {
+  overflow: hidden;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.copy {
+  text-align: center;
+  margin: 70px;
+  padding: 10px;
+}
+
+footer {
+
+text-align: center;
+}
+
+li {
+  padding: 10px;
+}
+footer {
+  padding-top: 150px;
+}
