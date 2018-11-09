@@ -11,8 +11,8 @@ Cart.prototype.addItem = function(product, quantity) {
 };
 
 Cart.prototype.saveToLocalStorage = function() {
+  localStorage.setItem('products',JSON.stringify(Product.allProducts));
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
-  localStorage.setItem('products', JSON.stringify(Product.allProducts));
 };
 
 Cart.prototype.removeItem = function(item) {
@@ -32,7 +32,7 @@ var Product = function(filePath, name) {
   Product.allProducts.push(this);
 };
 Product.allProducts = [];
-
+cart.saveToLocalStorage();
 
 
 function generateCatalog() {
