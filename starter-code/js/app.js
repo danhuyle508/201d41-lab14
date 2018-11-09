@@ -7,11 +7,22 @@ var Cart = function(items) {
 };
 
 Cart.prototype.addItem = function(product, quantity) {
+  var bodyElement = document.getElementsByTagName('tbody');
+  var rowElement = document.createElement('tr');
+  var valueDataElement = document.createElement('td');
+  var dataElement = document.createElement('td');
+  dataElement.textContent = product;
+  rowElement.appendChild(dataElement);
+  valueDataElement.textContent = quantity;
+  rowElement.appendChild(valueDataElement);
+  bodyElement.appendChild(rowElement);
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
 };
 
 Cart.prototype.saveToLocalStorage = function() {
-  localStorage.setItem('products',JSON.stringify(Product.allProducts));
+  var productObj = JSON.parse(localStorage.getItem("products")) || {}; 
+  productObj[product] = quantity; 
+  localStorage.setItem('products',JSON.stringify(productObj));
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
 };
 
@@ -32,7 +43,7 @@ var Product = function(filePath, name) {
   Product.allProducts.push(this);
 };
 Product.allProducts = [];
-cart.saveToLocalStorage();
+// cart.saveToLocalStorage();
 
 
 function generateCatalog() {
